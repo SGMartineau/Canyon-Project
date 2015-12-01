@@ -1,0 +1,13 @@
+    <h1 class='zoneHead'>{{zoneName}}</h1>
+        
+    <ul class="collapsible" data-collapsible="accordion">
+        <li ng-repeat="canyon in canyons">
+            <div class="collapsible-header"><a href="#/canyon/{{canyon.name.toLowerCase().split(' ').join('')}}">{{canyon.name}}</a></div>
+            <div class="collapsible-body">
+                <span>{{canyon.difficulty}}</span>
+                <span>{{canyon.rating}}</span>
+                <span>{{canyon.arrive}}</span>
+            </div>
+        </li>
+    </ul>
+

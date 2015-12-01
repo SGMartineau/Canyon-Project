@@ -1,0 +1,62 @@
+body {
+    background-image: url(https://c2.staticflickr.com/2/1339/5126762996_8f0a2138a5_b.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, auto;
+    background-attachment: fixed;
+}
+
+.navBar {
+    margin-bottom: 5%;
+}
+
+.nav-mobile {
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.utah {
+    float: right;
+    margin-right: 8%;
+    height: 50%;
+}
+
+
+.zones {
+    display: inline-block;
+    padding: 0 2% 0 2%;
+    margin-left: 5%;
+    font-size: 2em;
+    
+}
+
+.collapsible {
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    
+}
+
+.zoneHead {
+    margin: 2% 30%;
+    text-align: center;
+    background: white;
+    border: solid .5px #5d4037;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #5d4037;
+}
+
+.collapsible-body {
+    display: flex;
+    justify-content: space-around;
+    background-color: #5d4037;
+    color: white;
+}
+

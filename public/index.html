@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="canyon" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canyon Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <nav class="navBar">
+        <div class="nav-wrapper #5d4037 brown darken-2">
+            <a href="#" class="brand-logo center">Canyon Project</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Rating System</a></li>
+                <li><a href="badges.html">New Canyon</a></li>
+                <li><a href="collapsible.html">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+<!--
+    <div>
+        <input ng-model="zone.name" ng-change="updateAlias()" type="text">
+        <input ng-model="zone.alias" type="text">
+    </div>-->
+    <div ui-view></div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <script src="./app.js"></script>
+    <script src="zone/zoneCtrl.js"></script>
+    <script src="canyon/canyonCtrl.js"></script>
+    <script src="./mainCtrl.js"></script>
+</body>
+
+</html>
