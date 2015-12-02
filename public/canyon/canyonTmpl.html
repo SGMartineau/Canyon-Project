@@ -1,10 +1,18 @@
 <h1 class='zoneHead'>{{canyon.name}}</h1>
 
-<div>
+<div class="eachCanyon">
     <span>Difficulty Rating: {{canyon.difficulty}}</span>
     <span>Enjoyment Rating: {{canyon.rating}}/5</span>
     <span>How to get there: {{canyon.arrive}}</span>
     <span>Approach: {{canyon.approach}}</span>
-    <span></span>
 </div>
 
+
+<div ng-repeat="comment in canyon.comments" class="commentBox">
+    <div class="commentInfo">
+        <div>{{comment.userName}}</div>
+        <div>Enjoyment Rating: {{comment.difficulty}}/5</div>
+        <div>Length: {{comment.length}}</div>
+    </div>
+    <div class="commentComment">{{comment.comment}}</div>
+</div>

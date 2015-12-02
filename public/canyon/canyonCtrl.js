@@ -8,7 +8,8 @@ angular.module('canyon').controller('canyonCtrl', function($scope, $stateParams,
         });
     }
         
-    
     $scope.getACanyon();
+    
+    
     
 });

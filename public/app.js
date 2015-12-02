@@ -20,6 +20,20 @@ angular.module('canyon', ['ui.router'])
             url: '/canyon/:canyon',
             templateUrl: './canyon/canyonTmpl.html',
             controller: 'canyonCtrl'
+        })
+    
+        .state('newZone', {
+            url: '/addZone',
+            templateUrl: './create/newZoneTmpl.html',
+            controller: 'newZoneCtrl'
+        })
+    
+        .state('newCanyon', {
+            url: '/addCanyon',
+            templateUrl: './create/newCanyonTmpl.html',
+//            templateUrl: './create/miles.html',
+            controller: 'newCanyonCtrl'
+//            controller: 'miles'
         });
     
     $urlRouterProvider.otherwise('/');
