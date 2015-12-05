@@ -1,17 +1,14 @@
-(function () {
-    'use strict';
+angular.module('canyon').controller('newCanyonCtrl', function ($scope, $http, newCanyonService) {
 
-    angular.module('canyon').controller('newCanyonCtrl', CanyonController);
+    $(document).ready(function () {
+        $('select').material_select();
+    });
 
-    function CanyonController($scope, $http) {
 
-        $(document).ready(function () {
-            $('select').material_select();
-        });
-
-        
-        
+    $scope.addCanyon = function () {
+        newCanyonService.addCanyon($scope.canyonData);
+        $scope.canyonData = {};
     }
-    
-    
-}());
+
+
+});

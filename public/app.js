@@ -11,7 +11,7 @@ angular.module('canyon', ['ui.router'])
         })
     
         .state('zone', {
-            url: '/zone/:zone',
+            url: '/zone/:zoneId',
             templateUrl: './zone/zoneTmpl.html',
             controller: 'zoneCtrl'
         })

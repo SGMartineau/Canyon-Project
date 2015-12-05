@@ -5,27 +5,28 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input id="zone_name" type="text">
+                <input id="zone_name" type="text" ng-model="zoneData.name">
                 <label for="zone_name">Zone Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="zone_desc" type="text">
+                <input id="zone_desc" type="text" ng-model="zoneData.description">
                 <label for="zone_desc">Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="lat_inp" type="text">
+                <input id="lat_inp" type="text" ng-model="zoneData.latitude">
                 <label for="lat_inp">Latitude Coordinate</label>
             </div>            
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="lon_inp" type="text">
+                <input id="lon_inp" type="text" ng-model="zoneData.longitude">
                 <label for="lon_inp">Longitude Coordinate</label>
             </div>            
         </div>
+        <button class="btn waves-effect waves-light canSubBut" type="submit" name="action" ng-click="addZone()">Submit </button>
     </form>
 </div>

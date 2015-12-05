@@ -14,9 +14,14 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/api/zone', zoneCtrl.getZone);
+app.get('/api/zone-1', zoneCtrl.getOneZone);
 app.post('/api/zone', zoneCtrl.addZone);
+app.put('/api/zone', zoneCtrl.editZone);
 app.get('/api/canyon', canyonCtrl.getCanyon);
+app.get('/api/canyon-1', canyonCtrl.getOneCanyon);
+app.get('/api/canyon-2', canyonCtrl.getCanyons);
 app.post('/api/canyon', canyonCtrl.addCanyon);
+
 
 
 app.listen(port, function() {

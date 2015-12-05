@@ -6,18 +6,19 @@ var Canyon = Schema({
     rating: Number,
     difficulty: { type: String, required: true },
     comments: [{
-        userName: { type: String, required: true },
+        userName: String,
         difficulty: Number,
         comment: String,
         length: String,
         date: { type: Date, default: new Date() }
     }],
-    zone: { type: String },
+    zoneId: { type: String, required: true},
     arrive: { type: String, required: true },
     approach: { type: String, required: true },
-    gear: { type: [String], required: true },
+    gear: { type: String, required: true },
     photos: [String],
-    hike: String
+    hike: String,
+    description: String
 });
 
 module.exports = mongoose.model('Canyon', Canyon);

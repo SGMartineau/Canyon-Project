@@ -17,6 +17,26 @@ module.exports = {
         Canyon.find().then(function( response ) {
             res.send(response);
         });
+    },
+    
+    getOneCanyon: function( req, res) {
+        Canyon.findOne({ _id: req.query._id }, function(err, canyon){
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.send(canyon);
+            }
+        })
+    },
+    
+    getCanyons: function( req, res) {
+        Canyon.find({ zoneId: req.query.zoneId}, function( err, canyons ){
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.send(canyons);
+            }
+        })
     }
     
 }

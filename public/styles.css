@@ -111,9 +111,36 @@ ul {
     border-radius: 3px;
     box-shadow: 3px 3px 3px #5d4037;
     padding-top: 1%;
+    margin-bottom: 2%;
 }
 
 #nav-mobile {
     margin-right: 2%;
     padding: 0 1%;
+}
+
+.canSubBut {
+    margin-bottom: 1%;
+}
+
+.editZoneButt {
+    float: right;
+    margin: 3% 6%;
+}
+
+.editZoneForm {
+    position: fixed;
+    top: 10%;
+    width: 50%;
+}
+
+.editCanyonForm {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    background-color: white;
+    border: solid .5px #5d4037;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #5d4037;
 }
