@@ -18,7 +18,7 @@ angular.module('canyon').controller('canyonCtrl', function($scope, $stateParams,
     }
     
     $scope.editCanyon = function () {
-        $http.put('/api/canyon?_id=' + canyonObj._id, canyonObj);
+        $http.put('/api/canyon?_id=' + $scope.canyon._id, $scope.canyon);
         $scope.editCanyonForm = false;
         $scope.canyonButtonShow = true;
     }

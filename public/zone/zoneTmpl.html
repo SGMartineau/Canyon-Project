@@ -1,5 +1,7 @@
 <h1 class='zoneHead'>{{oneZone.name}}</h1>
 
+<div ng-repeat="weather in myWeather">{{weather.qpf_allday.in}}</div>
+
 <ul class="collapsible" data-collapsible="accordion">
     <li ng-repeat="canyon in canyones">
         <div class="collapsible-header"><a href="#/canyon/{{canyon._id}}">{{canyon.name}}</a></div>

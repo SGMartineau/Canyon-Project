@@ -24,18 +24,18 @@
                 <li><a href="#/addZone">New Zone</a></li>
             </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>Login</li>
+                <li ng-click="showLogin()">Login</li>
             </ul>
         </div>
     </nav>
     
+    <div ng-show="toggleLog" class="loginPop">
+        <div id="facebook-login-btb">
+            <a href="/auth/facebook" ng-click="hideLogin()">login with <span>facebook</span></a>
+        </div>
+    </div>
     
-    
-<!--
-    <div>
-        <input ng-model="zone.name" ng-change="updateAlias()" type="text">
-        <input ng-model="zone.alias" type="text">
-    </div>-->
+
     <div ui-view></div>
     
 

@@ -37,6 +37,16 @@ module.exports = {
                 res.send(canyons);
             }
         })
+    },
+    
+    editCanyon: function (req, res) {
+        Canyon.findByIdAndUpdate(req.query._id, req.body, function( err, data ) {
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.send(data);
+            }
+        });
     }
     
 }

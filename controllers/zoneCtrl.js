@@ -19,8 +19,7 @@ module.exports = {
     },
 
     editZone: function (req, res) {
-        console.log(req.zone._id);
-        Zone.findByIdAndUpdate(req.zoneObj._id, req.zoneObj, function( err, data ) {
+        Zone.findByIdAndUpdate(req.query._id, req.body.zone, function( err, data ) {
             if (err) {
                 res.status(500).send(err);
             } else {
@@ -34,6 +33,7 @@ module.exports = {
             if (err) {
                 res.status(500).send(err);
             } else {
+                zone.save();
                 res.send(zone);
             }
         })

@@ -5,6 +5,10 @@ angular.module('canyon').controller('mainCtrl', function( $scope, $http ) {
         $('select').material_select();
     });
     
+    $scope.getWeather = function() {
+        zoneService
+    }
+    
     $scope.getZone = function() {
         $http.get('/api/zone').then(function( response ) {
             $scope.zones = response.data;
@@ -22,9 +26,15 @@ angular.module('canyon').controller('mainCtrl', function( $scope, $http ) {
     
     $scope.getCanyon();
     
-/*    $scope.updateAlias = function() {
-        $scope.zone.alias = $scope.zone.name.toLowerCase().split(' ').join('');
+    $scope.toggleLog = false;
+    
+    $scope.showLogin = function() {
+        $scope.toggleLog = true;
     }
-    */
+    
+    $scope.hideLogin = function() {
+        $scope.toggleLog = false;
+    }
+
     
 });
