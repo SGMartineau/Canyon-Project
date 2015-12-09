@@ -6,8 +6,17 @@ angular.module('canyon').controller('canyonCtrl', function($scope, $stateParams,
             $scope.canyon = response.data;
         });
     };
-      
+    
     $scope.getACanyon();
+    
+    $scope.findUser = function() {
+        $http.get('/api/autheduser').then(function (response) {
+            $scope.authedUser = response.data;
+        });
+    };
+      
+    $scope.findUser();
+    
     
     $scope.editCanyonForm = false;
     $scope.canyonButtonShow = true;
@@ -27,5 +36,19 @@ angular.module('canyon').controller('canyonCtrl', function($scope, $stateParams,
         $scope.canyonButtonShow = true;
     }
     
+    $scope.showCommentForm = function() {
+        $scope.commentBox = true;
+        $scope.commentButtonShow = false;
+    }
+    
+    $scope.addComment = function () {
+        $scope.commentBox = false;
+        $scope.commentButtonShow = true;
+        $scope.comm.userName = $scope.authedUser.name;
+        console.log($scope.authedUser);
+        $http.post('/api/comment?_id=' + $stateParams.canyon, $scope.comm).then(function (data) {
+            console.log(data);
+        })
+    }
     
 });

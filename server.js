@@ -65,6 +65,9 @@ app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook'), function(req, res) {
     res.redirect('/#/');    
 });
+app.get('/api/autheduser', function(req,res) {
+    res.send(req.user);
+});
 app.get('/api/users', usersCtrl.getUsers);
 app.get('/api/zone', zoneCtrl.getZone);
 app.get('/api/zone-1', zoneCtrl.getOneZone);

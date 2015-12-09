@@ -12,7 +12,7 @@ var Canyon = Schema({
         length: String,
         date: { type: Date, default: new Date() }
     }],
-    zoneId: { type: String, required: true},
+    zoneId: { type: String, required: true },
     arrive: { type: String, required: true },
     approach: { type: String, required: true },
     gear: { type: String, required: true },

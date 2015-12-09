@@ -177,6 +177,7 @@ ul {
 .commentForm {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .commentForm div div {
@@ -185,4 +186,10 @@ ul {
 
 .commentForm textarea {
     margin-left: 2%;
+    width: 75%;
+    height: 13em;
+}
+
+.bigC {
+    margin-bottom: 1%;
 }

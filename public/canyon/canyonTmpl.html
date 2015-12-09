@@ -1,7 +1,7 @@
 <h1 class='zoneHead'>{{canyon.name}}</h1>
 
 
-<div>
+<div class="bigC">
     <div class="eachCanyon">
         <h5>Description:</h5>
         <div>{{canyon.description}}</div>
@@ -24,20 +24,20 @@
     <div class="commentComment">{{comment.comment}}</div>
 </div>
 
-<button class="btn waves-effect waves-light commentButton" name="action" ng-click="showCanyonForm()" ng-show="commentButtonShow">Leave A Comment</button>
+<button class="btn waves-effect waves-light commentButton" name="action" ng-click="showCommentForm()" ng-show="commentButtonShow">Leave A Comment</button>
 
-<div class="commentBox">
+<div class="commentBox" ng-show="commentBox">
     <form class="commentForm">
         <div>
-            <input type="text" id="qnum">
+            <input type="text" id="qnum" ng-model="comm.difficulty">
             <label class="active" for="qnum">Quality</label>
-            <input type="text" id="tnum">
+            <input type="text" id="tnum" ng-model="comm.length">
             <label class="active" for="tnum">Time</label>
             <div>
-                <button>Submit</button>
+                <button class="btn waves-effect waves-light" name="action" ng-click="addComment()">Submit</button>
             </div>
         </div>
-        <textarea></textarea>
+        <textarea ng-model="comm.comment"></textarea>
     </form>
 </div>
 
