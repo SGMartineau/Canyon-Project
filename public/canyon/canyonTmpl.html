@@ -1,10 +1,17 @@
 <h1 class='zoneHead'>{{canyon.name}}</h1>
 
-<div class="eachCanyon">
-    <span>Difficulty Rating: {{canyon.difficulty}}</span>
-    <span>Enjoyment Rating: {{canyon.rating}}/5</span>
-    <span>How to get there: {{canyon.arrive}}</span>
-    <span>Approach: {{canyon.approach}}</span>
+
+<div>
+    <div class="eachCanyon">
+        <h5>Description:</h5>
+        <div>{{canyon.description}}</div>
+        <h5>Gear:</h5>
+        <div>{{canyon.gear}}</div>
+        <h5>Get there:</h5>
+        <div>{{canyon.arrive}}</div>
+        <h5>Approach:</h5>
+        <div>{{canyon.approach}}</div>
+    </div>
 </div>
 
 
@@ -17,7 +24,24 @@
     <div class="commentComment">{{comment.comment}}</div>
 </div>
 
-<button class="btn waves-effect waves-light editZoneButt" name="action" ng-click="showCanyonForm()" ng-show="canyonButtonShow">Edit Zone</button>
+<button class="btn waves-effect waves-light commentButton" name="action" ng-click="showCanyonForm()" ng-show="commentButtonShow">Leave A Comment</button>
+
+<div class="commentBox">
+    <form class="commentForm">
+        <div>
+            <input type="text" id="qnum">
+            <label class="active" for="qnum">Quality</label>
+            <input type="text" id="tnum">
+            <label class="active" for="tnum">Time</label>
+            <div>
+                <button>Submit</button>
+            </div>
+        </div>
+        <textarea></textarea>
+    </form>
+</div>
+
+<button class="btn waves-effect waves-light editZoneButt" name="action" ng-click="showCanyonForm()" ng-show="canyonButtonShow">Edit Canyon</button>
 
 <div class="row" ng-show="editCanyonForm">
 
@@ -25,42 +49,42 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="canyon_name" type="text" ng-model="canyon.name">
-                <label for="canyon_name">Canyon Name</label>
+                <label class="active" for="canyon_name">Canyon Name</label>
             </div>
         </div>
         
         <div class="row">
             <div class="input-field col s12">
                 <input id="canyon_desc" type="text" ng-model="canyon.description">
-                <label for="canyon_desc">Description</label>
+                <label class="active" for="canyon_desc">Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
                 <input id="rating_input" type="text" ng-model="canyon.difficulty">
-                <label for="rating_input">Rating</label>
+                <label class="active" for="rating_input">Rating</label>
             </div>
             <div class="input-field col s6">
                 <input id="quality_input" type="text" ng-model="canyon.rating">
-                <label for="quality_input">Quality 1 to 5</label>
+                <label class="active" for="quality_input">Quality 1 to 5</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="hike_input" type="text" ng-model="canyon.approach">
-                <label for="hike_input">Description to get to canyon entrance</label>
+                <label class="active" for="hike_input">Description to get to canyon entrance</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="drive_input" type="text" ng-model="canyon.arrive">
-                <label for="drive_input">Where to drive to</label>
+                <label class="active" for="drive_input">Where to drive to</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="gear_input" type="text" ng-model="canyon.gear">
-                <label for="gear_input">Required gear</label>
+                <label class="active" for="gear_input">Required gear</label>
             </div>
         </div>
         <button class="btn waves-effect waves-light canSubBut" type="submit" name="action" ng-click="editCanyon()">Submit </button>

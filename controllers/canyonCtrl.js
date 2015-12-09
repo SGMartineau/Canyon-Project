@@ -47,6 +47,23 @@ module.exports = {
                 res.send(data);
             }
         });
+    },
+    
+    addComment: function ( req, res ) {
+        Canyon.findById(req.query._id, function( err, canyon ) {
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                canyon.comments.push(req.body);
+                canyon.save(function( err, data ) {
+                    if (err) {
+                        res.status(500).send(err);
+                    } else {
+                        res.send(data);
+                    }
+                })
+            }
+        })
     }
     
 }

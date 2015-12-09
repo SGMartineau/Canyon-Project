@@ -11,6 +11,10 @@ angular.module('canyon').controller('canyonCtrl', function($scope, $stateParams,
     
     $scope.editCanyonForm = false;
     $scope.canyonButtonShow = true;
+    $scope.commentButtonShow = true;
+    $scope.commentBox = false;
+    
+    
     
     $scope.showCanyonForm = function() {
         $scope.editCanyonForm = true;

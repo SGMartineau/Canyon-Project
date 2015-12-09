@@ -1,17 +1,21 @@
 <h1 class='zoneHead'>{{oneZone.name}}</h1>
 
-<div ng-repeat="weather in myWeather">{{weather.qpf_allday.in}}</div>
+<div class="centerPlz">
+    <div ng-repeat="weather in myWeather" class='weath'>
+        <div>{{weather.date.monthname}} {{weather.date.day}}</div>
+        <div><img src="{{weather.icon_url}}"></div>
+        <div>{{weather.conditions}}</div>
+        <div>% of Precipitation : {{weather.pop}}</div> 
+    </div>
+</div>
 
-<ul class="collapsible" data-collapsible="accordion">
-    <li ng-repeat="canyon in canyones">
-        <div class="collapsible-header"><a href="#/canyon/{{canyon._id}}">{{canyon.name}}</a></div>
-        <div class="collapsible-body">
-            <span>{{canyon.difficulty}}</span>
-            <span>{{canyon.rating}}</span>
-            <span>{{canyon.arrive}}</span>
-        </div>
-    </li>
-</ul>
+<div class="centerPlz">
+    <div ng-repeat="canyon in canyones" class="listCanyons">
+        <div><a href="#/canyon/{{canyon._id}}">{{canyon.name}}</a></div>
+        <div>{{canyon.difficulty}}</div>
+        <div>{{canyon.rating}}</div>
+    </div>
+</div>
 
 <button class="btn waves-effect waves-light editZoneButt" name="action" ng-click="showForm()" ng-show="buttonShow">Edit Zone</button>
 
@@ -21,25 +25,25 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="zone_name" type="text" ng-model="oneZone.name">
-                <label for="zone_name">Zone Name</label>
+                <label for="zone_name" class="active">Zone Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="zone_desc" type="text" ng-model="oneZone.description">
-                <label for="zone_desc">Description</label>
+                <label for="zone_desc" class="active">Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="lat_inp" type="text" ng-model="oneZone.latitude">
-                <label for="lat_inp">Latitude Coordinate</label>
+                <label for="lat_inp" class="active">Latitude Coordinate</label>
             </div>            
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="lon_inp" type="text" ng-model="oneZone.longitude">
-                <label for="lon_inp">Longitude Coordinate</label>
+                <label for="lon_inp" class="active">Longitude Coordinate</label>
             </div>            
         </div>
         <button class="btn waves-effect waves-light canSubBut" type="submit" name="action" ng-click="alterZone()">Submit </button>

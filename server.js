@@ -74,6 +74,7 @@ app.get('/api/canyon', canyonCtrl.getCanyon);
 app.get('/api/canyon-1', canyonCtrl.getOneCanyon);
 app.get('/api/canyon-2', canyonCtrl.getCanyons);
 app.post('/api/canyon', canyonCtrl.addCanyon);
+app.post('/api/comment', canyonCtrl.addComment);
 app.put('/api/canyon', canyonCtrl.editCanyon);
 
 
