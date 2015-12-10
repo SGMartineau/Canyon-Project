@@ -1,4 +1,5 @@
 var express = require('express'),
+    http = require('http'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
     session = require('express-session'),
@@ -9,10 +10,12 @@ var express = require('express'),
     User = require('./models/Users'),
     zoneCtrl = require('./controllers/zoneCtrl'),
     usersCtrl = require('./controllers/usersCtrl'),
-    port = 8090,
+    port =  process.env.PORT || 8090,
     app = express(),
     mongoUri = 'mongodb://localhost:27017/canyon',
     keys = require('./keys');
+
+
 
 app.use(session({secret: 'Here I go again on my own.'}));
 app.use(passport.initialize());
@@ -81,10 +84,14 @@ app.post('/api/comment', canyonCtrl.addComment);
 app.put('/api/canyon', canyonCtrl.editCanyon);
 
 
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-type': 'text/plain'});
+    res.end('Hello World\n');
+}).listen(port);
 
-app.listen(port, function() {
+/*app.listen(port, function() {
     console.log('listening on ' + port);
-});
+});*/
 
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
