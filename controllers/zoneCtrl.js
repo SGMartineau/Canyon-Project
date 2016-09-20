@@ -13,7 +13,7 @@ module.exports = {
     },
 
     getZone: function (req, res) {
-        Zone.find().then(function (response) {
+        Zone.find().populate('canyons').then(function (response) {
             res.send(response);
         });
     },

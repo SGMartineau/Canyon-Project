@@ -2,23 +2,23 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var Canyon = Schema({
-    name: { type: String, required: true },
-    rating: Number,
-    difficulty: { type: String, required: true },
-    comments: [{
-        userName: String,
-        difficulty: Number,
-        comment: String,
-        length: String,
-        date: { type: Date, default: new Date() }
-    }],
-    zoneId: { type: String, required: true },
-    arrive: { type: String, required: true },
-    approach: { type: String, required: true },
-    gear: { type: String, required: true },
-    photos: [String],
-    hike: String,
-    description: String
+    name: {type: String, required: true},
+    description: {type: String, required: true},
+    hike: {type: String, required: true},
+    drive: {type: String, required: true},
+    latitude: {type: Number, required: true},
+    longitude: {type: Number, required: true},
+    technical: {type: Number, required: true},
+    water: {type: String, required: true},
+    time: {type: String, required: true},
+    risk: {type: String, required: true},
+    quality: {type: Number, required: true},
+    numRepels: {type: Number, requried: true},
+    longRepel: {type: Number, required: true}
 });
 
 module.exports = mongoose.model('Canyon', Canyon);
+
+
+//  "_id": "57d751f16bbfae55548f7f48"
+//  "57d753fa2f2cab5f54cf923f"

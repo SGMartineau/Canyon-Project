@@ -7,33 +7,30 @@ angular.module('canyon', ['ui.router'])
         .state('home', {
             url: '/',
             templateUrl: './home/homeTmpl.html',
-            controller: 'mainCtrl'
-        })
-    
-        .state('zone', {
-            url: '/zone/:zoneId',
-            templateUrl: './zone/zoneTmpl.html',
-            controller: 'zoneCtrl'
+            controller: 'homeCtrl'
         })
     
         .state('canyon', {
-            url: '/canyon/:canyon',
+            url: '/canyon/:canyonId',
             templateUrl: './canyon/canyonTmpl.html',
-            controller: 'canyonCtrl'
+            controller: 'canyonCtrl',
+            resolve: {
+                canyonResolve: function (homeSvc) {
+                    return homeSvc.passCanyon();
+                }
+            }
         })
     
-        .state('newZone', {
-            url: '/addZone',
-            templateUrl: './create/newZoneTmpl.html',
-            controller: 'newZoneCtrl'
+        .state('form1', {
+            url: '/form1',
+            templateUrl: './create/new1Tmpl.html',
+            controller: 'formCtrl'
         })
     
-        .state('newCanyon', {
-            url: '/addCanyon',
-            templateUrl: './create/newCanyonTmpl.html',
-//            templateUrl: './create/miles.html',
-            controller: 'newCanyonCtrl'
-//            controller: 'miles'
+        .state('form2', {
+            url: '/form2',
+            templateUrl: './create/new2Tmpl.html',
+            controller: 'formCtrl'
         });
     
     $urlRouterProvider.otherwise('/');

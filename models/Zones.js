@@ -3,9 +3,8 @@ var mongoose = require('mongoose'),
 
 var Zone = Schema({
     name: {type: String, required: true},
-    description: String,
-    latitude: String,
-    longitude: String
+    canyons: [{type: Schema.Types.ObjectId, ref: 'Canyon'}]
 });
 
 module.exports = mongoose.model('Zone', Zone);
+

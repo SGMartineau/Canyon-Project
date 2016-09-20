@@ -1,195 +1,279 @@
 body {
-    background-image: url(https://c2.staticflickr.com/2/1339/5126762996_8f0a2138a5_b.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%, auto;
-    background-attachment: fixed;
+    background-color: #e0dadc;
 }
 
-.navBar {
-    margin-bottom: 5%;
+nav {
+    background-color: #4c0307;
+    height: 56px;
+    margin-bottom: 0;
 }
 
-.nav-mobile {
-    
+nav div {
+    display: inline;
+    margin: 0 3%;
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
+nav div img {
+    margin-right: 4px;
 }
 
-ul {
-    list-style-type: none;
-}
-
-.utah {
+nav div:last-child {
     float: right;
-    margin-right: 8%;
+}
+
+.intro {
+    width: 100vw;
+    opacity: 0.95;
+    background-color: #4c0307;
+    margin-top: 0;
+    color: #FFF;
+}
+
+.intro p {
+    margin-top: 0;
+    width: 45%;
+    padding: 2% 3%;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #330506;
+    margin-left: 3%;
+    margin-top: 4%;
+    width: 29vw;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #330506;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.titles {
+    display: flex;
+}
+
+.zoneCanyon {
+    display: flex;
+}
+
+.zoneList {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+.zoneList div {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ffffff;
+    background-color: #4c0307;
+    opacity: .95;
+    padding: 4%;
+    width: 29vw;
+    margin: 0 0 1px 0;
 }
 
 
-.zones {
-    display: inline-block;
-    padding: 0 2% 0 2%;
-    margin-left: 5%;
-    font-size: 2em;
-    
+
+.canyons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    width: 71vw;
 }
 
-.zoneHead {
-    margin: 2% 30%;
-    text-align: center;
-    background: white;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-}
-
-.zoneHead2 {
-    margin: 2% 30%;
-    text-align: center;
-    background: #5d4037;
-    border: solid .5px white;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px white;
+.canyons div {
+    width: 20vh;
+    max-width: 20vh;
+    height: 20vh;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    background-color: #4c0307;
     color: white;
-}
-
-
-
-
-.eachCanyon {
-    background-color: white;
-    margin: 0 5%;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-    padding: 2%;
-}
-
-.eachCanyon div {
-    margin-bottom: 1%;
-    font-size: 17px;
-}
-
-.commentInfo {
-    display: inline-flex;
-    flex-direction: column;
-}
-
-.commentComment {
-    display: inline-flex;
     padding-left: 2%;
+    padding-top: 5%;
+    font-family: Roboto;
+    font-size: 24px;
+    letter-spacing: 1.1px;
 }
 
-.newZoneForm {
-    margin: 0 25%;
-    background-color: white;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-    padding-top: 1%;
-    margin-bottom: 2%;
+#rating {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-#nav-mobile {
-    margin-right: 2%;
-    padding: 0 1%;
+.canyonTop {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 0;
 }
 
-.canSubBut {
-    margin-bottom: 1%;
+h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2.3px;
+    color: #fff;
+    padding: 2% 0 0 3%;
 }
 
-.editZoneButt {
-    float: right;
-    margin: 3% 6%;
+.rating {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding-left: 3%;
+    margin: .5% 0 0 0;
 }
 
-.commentButton {
-    margin-left: 6%;
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.39;
+    letter-spacing: .8px;
+    color: #fff;
+    padding: 0 0 1.5% 3%;
+    margin: 1% 0 0 0;
+    width: 49%;
 }
 
-.editZoneForm {
-    position: fixed;
-    top: 10%;
-    width: 50%;
+.back {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: #4b0206;
+    margin: 1% 0 0 3%;
 }
 
-.editCanyonForm {
-    position: fixed;
-    top: 10%;
-    left: 25%;
-    width: 50%;
-    background-color: white;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-}
-
-
-.loginPop {
-    text-align: center;
-}
-
-.facelog {
-    height: 150px;
-}
-
-.weath {
-    display: inline-flex;
-    flex-direction: column;
-    margin: 2% 2%;
-    text-align: center;
-    background: white;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-    padding: 1%;
-}
-
-.centerPlz {
-    text-align: center;
-}
-
-.listCanyons {
-    display: inline-flex;
-    background-color: white;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
-    padding: 1%;
-    width: 30%;
-    justify-content: space-around;
-}
-
-.commentBox {
-    background-color: white;
-    color: #5d4037;
-    margin: 1% 5%;
-    padding: 1%;
-    border: solid .5px #5d4037;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #5d4037;
+.canyonContent {
     display: flex;
+    justify-content: flex-start;
 }
 
-.commentForm {
+.howTo {
+    margin: 0 3%;
+    width: 49%;
+}
+
+.howTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 1.4px;
+    color: #424242;
+}
+
+.paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.39;
+    letter-spacing: 0.8px;
+    color: #424242;
+}
+
+li {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.8px;
+    color: #424242;
+}
+
+.buy {
+    width: 134px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #490206;
+    border: none;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    color: #ffffff;
+}
+
+.general {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    color: #424242;
+}
+
+.descriptor {
+    padding: 0 0 0 3%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.39;
+    letter-spacing: .8px;
+    color: #424242;
+}
+
+.smallInput {
+    width: 333px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin: -1% 0 0 3%;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    color: #757575;
+    line-height: 50px;
+    padding-left: 10px;
+    
+}
+
+.largeInput {
+    width: 599px;
+    height: 159px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin: -1% 0 0 3%;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    color: #757575;
+    padding: 10px;
+}
+
+.pickOne {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 3%;
 }
 
-.commentForm div div {
-    text-align: right;
+.pickOne div {
+    width: 94px;
+    height: 50px;
+    border-radius 2px;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: .8px;
+    text-align: center;
+    color: #424242;
+    margin: 0 2% 2% 0;
 }
 
-.commentForm textarea {
-    margin-left: 2%;
-    width: 75%;
-    height: 13em;
+.highlighted {
+    border: solid 2px #4c0307;
 }
 
-.bigC {
-    margin-bottom: 1%;
-}

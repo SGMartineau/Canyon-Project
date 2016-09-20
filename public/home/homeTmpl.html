@@ -1,13 +1,25 @@
-<div class="mainPage">
+<div class="intro">
+    <p>Canyon Log was created to help people document slot canyons.  It will help you prepare for the canyons and help you to avoid unwanted suprises while hiking them.  It also details how to drive to the canyons, how to hike them and the gear you will need on each hike.</p>
+</div>
 
-    
-    <div class='container'>
-    
-        <ul class="zones">
-            <li ng-repeat="zone in zones"><a class="waves-effect waves-light btn #5d4037 brown darken-2" href="#/zone/{{zone._id}}">{{ zone.name }}</a></li>
-        </ul>
+<div class="titles">
+    <h2>Pick a location</h2>
+    <h3>Select a trail</h3>
+</div>
+
+<div class="zoneCanyon">
+
+    <div class="zoneList">
+        <div ng-repeat="zone in zones" ng-click="showCanyons(this.zone.canyons)">{{zone.name}}</div>
+    </div>
 
 
-    </div>    
-        
+    <div class="canyons">
+        <div ng-repeat="canyon in canyons" ng-click="toCanyon(this.canyon)">
+            {{canyon.name}} <br/>
+            <span id="rating">{{canyon.technical}}{{canyon.water}}{{canyon.time}}</span>
+        </div>
+    </div>
+
+
 </div>
