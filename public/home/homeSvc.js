@@ -14,4 +14,10 @@ angular.module('canyon').service('homeSvc', function ($http, $q) {
         return this.thisCanyon;
     }
     
+    this.addZone = function (zoneName) {
+        return $http.post('/api/zone', {name: zoneName}).then(function(response) {
+            return response.data;
+        })
+    }
+    
 })

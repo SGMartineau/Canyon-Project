@@ -1,6 +1,7 @@
 var Zone = require('../models/Zones');
 
 module.exports = {
+    
 
     addZone: function (req, res) {
         new Zone(req.body).save(function (err, data) {
@@ -19,11 +20,13 @@ module.exports = {
     },
 
     editZone: function (req, res) {
-        Zone.findByIdAndUpdate(req.query._id, req.body.zone, function( err, data ) {
+        Zone.findOne({ _id: req.query._id},  function( err, zone ) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send(data);
+                zone.canyons.push(req.query.canyonId);
+                zone.save();
+                res.send(zone);
             }
         });
     },

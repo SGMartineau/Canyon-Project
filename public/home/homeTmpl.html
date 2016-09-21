@@ -11,7 +11,11 @@
 
     <div class="zoneList">
         <div ng-repeat="zone in zones" ng-click="showCanyons(this.zone.canyons)">{{zone.name}}</div>
+        <div ng-click="showMe()" id="theAdd">Add A Zone</div>
+        <p contenteditable="true" class="zoneInput" ng-model="newZone" id="theZone">Zone Name</p>
+        <button class="zoneBtn" id="theButton" ng-click="submitZone(newZone)">Submit</button>
     </div>
+    
 
 
     <div class="canyons">

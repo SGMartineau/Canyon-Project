@@ -12,9 +12,9 @@ var Canyon = Schema({
     water: {type: String, required: true},
     time: {type: String, required: true},
     risk: {type: String, required: true},
-    quality: {type: Number, required: true},
-    numRepels: {type: Number, requried: true},
-    longRepel: {type: Number, required: true}
+    quality: {type: Number},
+    numRepels: {type: Number},
+    longRepel: {type: Number}
 });
 
 module.exports = mongoose.model('Canyon', Canyon);

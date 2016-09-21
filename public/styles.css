@@ -19,6 +19,7 @@ nav div img {
 
 nav div:last-child {
     float: right;
+    display: none;
 }
 
 .intro {
@@ -78,7 +79,7 @@ h3 {
     opacity: .95;
     padding: 4%;
     width: 29vw;
-    margin: 0 0 1px 0;
+    margin: 0 0 2px 0;
 }
 
 
@@ -96,13 +97,13 @@ h3 {
     height: 20vh;
     margin-right: 4%;
     margin-bottom: 4%;
-    background-color: #4c0307;
     color: white;
     padding-left: 2%;
     padding-top: 5%;
     font-family: Roboto;
     font-size: 24px;
     letter-spacing: 1.1px;
+    background-image: url(./img/292584.jpg);
 }
 
 #rating {
@@ -110,7 +111,13 @@ h3 {
 }
 
 .canyonTop {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: 
+        linear-gradient(
+          rgba(0,0,0,0.5),
+          rgba(0,0,0,0.5)
+        ),
+        url(./img/292584.jpg);
+    
     margin-top: 0;
 }
 
@@ -277,3 +284,50 @@ li {
     border: solid 2px #4c0307;
 }
 
+.next {
+    width: 143px;
+    height: 50px;
+    border-width: 0;
+    border-radius: 2px;
+    background-color: #490206;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    color: #ffffff;
+    float: right;
+    margin: 10px 30px 10px 0;
+}
+
+.pickZone {
+    width: 333px;
+    margin-left: 3%;
+    display: block;
+}
+
+.zoneInput {
+    width: 29vw;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    color: #757575;
+    line-height: 50px;
+    padding-left: 4%;
+    display: none;
+}
+
+.zoneBtn {
+    width: 143px;
+    height: 50px;
+    border-radius: 2px;
+    border-width: 0;
+    background-color: #490206;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .8px;
+    display: none;
+}
