@@ -11,7 +11,7 @@ var express = require('express'),
     usersCtrl = require('./controllers/usersCtrl'),
     port = 8080,
     app = express(),
-    mongoUri = 'mongodb://localhost:27017/canyon',
+    mongoUri = '127.0.0.1:27017',
     keys = require('./keys');
 
 
