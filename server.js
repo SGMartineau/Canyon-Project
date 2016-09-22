@@ -1,7 +1,6 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
-    http = require('http'),
     session = require('express-session'),
     passport = require('passport'),
     FacebookStrategy = require('passport-facebook').Strategy,
@@ -10,8 +9,10 @@ var express = require('express'),
     User = require('./models/Users'),
     zoneCtrl = require('./controllers/zoneCtrl'),
     usersCtrl = require('./controllers/usersCtrl'),
-    port = process.env.PORT,
-    app = express();
+    port = 8080,
+    app = express(),
+    mongoUri = 'mongodb://localhost:27017/canyon',
+    keys = require('./keys');
 
 
 
@@ -58,8 +59,7 @@ var express = require('express'),
 //});
 
 
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.json({limit: '50mb', extended: true}))
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
@@ -87,13 +87,13 @@ app.post('/api/comment', canyonCtrl.addComment);
 
 app.put('/api/canyon', canyonCtrl.editCanyon);
 
-var server = http.createServer(app);
+
 
 app.listen(port, function() {
     console.log('listening on ' + port);
 });
 
-mongoose.connect(process.env.MONGOLAB_URI);
-//mongoose.connection.once('open', function() {
-//    console.log('Connected to MongoDB at ' + mongoUri);
-//})
+mongoose.connect(mongoUri);
+mongoose.connection.once('open', function() {
+    console.log('Connected to MongoDB at ' + mongoUri);
+})
