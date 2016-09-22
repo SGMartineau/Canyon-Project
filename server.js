@@ -9,9 +9,8 @@ var express = require('express'),
     User = require('./models/Users'),
     zoneCtrl = require('./controllers/zoneCtrl'),
     usersCtrl = require('./controllers/usersCtrl'),
-    port = 8080,
+    port = process.env.PORT,
     app = express(),
-    mongoUri = '127.0.0.1:27017',
     keys = require('./keys');
 
 
@@ -93,7 +92,7 @@ app.listen(port, function() {
     console.log('listening on ' + port);
 });
 
-mongoose.connect(mongoUri);
+mongoose.connect(process.env.MONGOLAB_URI);
 mongoose.connection.once('open', function() {
     console.log('Connected to MongoDB at ' + mongoUri);
 })
