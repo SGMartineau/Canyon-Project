@@ -9,10 +9,9 @@ var express = require('express'),
     User = require('./models/Users'),
     zoneCtrl = require('./controllers/zoneCtrl'),
     usersCtrl = require('./controllers/usersCtrl'),
-    port = 8080,
+    port = 80,
     app = express(),
-    mongoUri = 'mongodb://localhost:27017/canyon',
-    keys = require('./keys');
+    mongoUri = 'mongodb://localhost:27017/canyon'
 
 
 
